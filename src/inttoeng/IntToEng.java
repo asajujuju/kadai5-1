@@ -16,7 +16,10 @@ public class IntToEng {
 	//数値を英訳する変更メソッド
 	static String translateEng(int n){
 		String number = "";
-		if(n>=10 && n<20){ //10〜19まで
+		if(n<10) {
+			number = oneplace(n);
+		}
+		else if(n<20){ //10〜19まで
 			
 			if(n==10) number = "ten";
 			else if(n==11) number = "eleven";
@@ -33,8 +36,30 @@ public class IntToEng {
 			String tenplace ="";
 			if(n/10 == 2) { //20~29
 			    tenplace = "twenty";
-				if(n%10 == 1) number = tenplace+"one";
+				number = tenplace+oneplace(n%10);	
+			}else if(n/10 == 3) { //20~29
+			    tenplace = "thirty";
+				number = tenplace+oneplace(n%10);	
+			}else if(n/10 == 4) { //20~29
+			    tenplace = "fourty";
+				number = tenplace+oneplace(n%10);	
+			}else if(n/10 == 5) { //20~29
+			    tenplace = "fifty";
+				number = tenplace+oneplace(n%10);	
+			}else if(n/10 == 6) { //20~29
+		    tenplace = "sixty";
+			number = tenplace+oneplace(n%10);	
+			}else if(n/10 == 7) { //20~29
+			    tenplace = "seventy";
+				number = tenplace+oneplace(n%10);	
+			}else if(n/10 == 8) { //20~29
+			    tenplace = "eighty";
+				number = tenplace+oneplace(n%10);	
+			}else if(n/10 == 9) { //20~29
+			    tenplace = "ninety";
+				number = tenplace+oneplace(n%10);	
 			}
+			
 			
 		}
 		return number;
@@ -42,7 +67,7 @@ public class IntToEng {
 	
 	static String oneplace(int n) {
 		String number = "";
-		if(n<10){ //１〜9まで
+		 //１〜9まで
 			if(n == 1) number = "one";
 			else if(n==2) number = "two";
 			else if(n==3) number = "three";
@@ -52,7 +77,6 @@ public class IntToEng {
 			else if(n==7) number = "seven";
 			else if(n==8) number = "eight";
 			else  number = "nine";
-		}
 		return number;
 	}
 
