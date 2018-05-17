@@ -36,28 +36,28 @@ public class IntToEng {
 			String tenplace ="";
 			if(n/10 == 2) { //20~29
 			    tenplace = "twenty";
-				number = tenplace+oneplace(n%10);	
-			}else if(n/10 == 3) { //20~29
+				number = tenplace(n/10)+oneplace(n%10);	
+			}else if(n/10 == 3) { //30~39
 			    tenplace = "thirty";
-				number = tenplace+oneplace(n%10);	
-			}else if(n/10 == 4) { //20~29
+				number = tenplace(n/10)+oneplace(n%10);	
+			}else if(n/10 == 4) { //40~49
 			    tenplace = "fourty";
-				number = tenplace+oneplace(n%10);	
-			}else if(n/10 == 5) { //20~29
+				number = tenplace(n/10)+oneplace(n%10);	
+			}else if(n/10 == 5) { //50~59
 			    tenplace = "fifty";
-				number = tenplace+oneplace(n%10);	
-			}else if(n/10 == 6) { //20~29
+				number = tenplace(n/10)+oneplace(n%10);	
+			}else if(n/10 == 6) { //60~69
 		    tenplace = "sixty";
-			number = tenplace+oneplace(n%10);	
-			}else if(n/10 == 7) { //20~29
+			number = tenplace(n/10)+oneplace(n%10);	
+			}else if(n/10 == 7) { //70~79
 			    tenplace = "seventy";
-				number = tenplace+oneplace(n%10);	
-			}else if(n/10 == 8) { //20~29
+				number = tenplace(n/10)+oneplace(n%10);	
+			}else if(n/10 == 8) { //80~89
 			    tenplace = "eighty";
-				number = tenplace+oneplace(n%10);	
-			}else if(n/10 == 9) { //20~29
+				number = tenplace(n/10)+oneplace(n%10);	
+			}else if(n/10 == 9) { //90~99
 			    tenplace = "ninety";
-				number = tenplace+oneplace(n%10);	
+				number = tenplace(n/10)+oneplace(n%10);	
 			}
 			
 			
@@ -77,6 +77,19 @@ public class IntToEng {
 			else if(n==7) number = "seven";
 			else if(n==8) number = "eight";
 			else  number = "nine";
+		return number;
+	}
+	static String tenplace(int n) {
+		String number = "";
+		 //2〜9まで
+			if(n==2) number = "twenty";
+			else if(n==3) number = "thirty";
+			else if(n==4) number = "fourty";
+			else if(n==5) number = "fifty";
+			else if(n==6) number = "sixty";
+			else if(n==7) number = "seventy";
+			else if(n==8) number = "eighty";
+			else  number = "ninety";
 		return number;
 	}
 
