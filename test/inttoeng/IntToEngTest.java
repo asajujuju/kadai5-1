@@ -28,5 +28,12 @@ public class IntToEngTest {
 		String actual = ite.translateEng(19);
 		assertThat(actual, is(expected));
 	}
+	@Test
+	public void 百から千までを英語に変換します	(){
+		IntToEng ite  = new IntToEng();
+		String expected = "onehundredone";
+		String actual = ite.translateEng(101);
+		assertThat(actual, is(expected));
+	}
 
 }
