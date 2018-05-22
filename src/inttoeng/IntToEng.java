@@ -47,10 +47,10 @@ public class IntToEng {
 		String[] num = {"","one","two","three","four","five","six","seven","eight","nine"};
 		return number=num[n];
 	}
-	static String tenplace(int n) {
+	static String tenplace(int n) {//101を処理できるようになりたい
 		String number = "";
 		 //20~90まで
-		String[] num = {"twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"};
+			String[] num = {"twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"};
 			return number=num[n-2];
 	}
 	
