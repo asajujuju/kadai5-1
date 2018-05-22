@@ -11,16 +11,16 @@ public class IntToEngTest {
 	@Test
 	public void 二十以上の数字を英語に変換します() {
 		IntToEng ite = new IntToEng();
-		String expected = "thirtytwo";
-		String actual = ite.translateEng(32);
+		String expected = "twenty";
+		String actual = ite.translateEng(20);
 		assertThat(actual,is(expected));
 		
 	}
 	@Test
 	public void 一桁を英語に変換します() {
 		IntToEng ite = new IntToEng();
-		String expected = "one";
-		String actual = ite.translateEng(1);
+		String expected = "onehundredone";
+		String actual = ite.translateEng(101);
 		assertThat(actual,is(expected));
 		
 	}
