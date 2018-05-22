@@ -15,6 +15,25 @@ public class IntToEng {
 	
 	//数値を英訳する変更メソッド
 	static String translateEng(int n){
+	
+	/*再起にする予定
+	 * 	String hund = "";
+	if(n>100){
+		if(n/100==1) {
+			hund = "hundred";
+			translateEng(n/10);
+			}
+		if(n/100==2) {
+			hund = "twohundred";
+		}if(n/100==3) {
+			hund = "twohundred";
+		}if(n/100==4) {
+			hund = "twohundred";
+		}if(n/100==5) {
+			hund = "twohundred";
+		}
+		translateEng(n/10);
+	}*/
 		String number = "";
 		if(n<10) {
 			number = oneplace(n);
