@@ -17,7 +17,7 @@ public class IntToEng {
 	static String translateEng(int n){
 		String number = "";
 		if(n==0)number = "zero";
-		if(n<10) {
+		else if(n<10) {
 			number = oneplace(n);
 		}
 		else if(n<20){ //10〜19まで
@@ -35,8 +35,8 @@ public class IntToEng {
 		else if(n<100){ //20~99まで
 			number = tenplace(n/10)+oneplace(n%10);	
 		}
-		else if(n<1000) {//99~1000まで
-			number = oneplace(n/100)+"hundred"+tenplace(n/10)+oneplace(n%10);	
+		else if(n<1000) {//100~1000まで
+			number = oneplace(n/100)+"hundred"+tenplace(n%100/10)+oneplace(n%10);	
 		}
 		return number;
 	}
@@ -47,11 +47,12 @@ public class IntToEng {
 		String[] num = {"","one","two","three","four","five","six","seven","eight","nine"};
 		return number=num[n];
 	}
-	static String tenplace(int n) {//101を処理できるようになりたい
+	static String tenplace(int n) {
 		String number = "";
 		 //20~90まで
 			String[] num = {"twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"};
-			return number=num[n-2];
+			if(n<2) return number = "";
+			else return number=num[n-2];
 	}
 	
 }
